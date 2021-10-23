@@ -1,3 +1,68 @@
+body {
+  /*font-family: 'Roboto', sans-serif;
+  font-family: 'Shrikhand', cursive;*/
+}
 
+header {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.header__logo {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.header__research {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 20px 0px 20px 0px;
+  background-color: #eaeaea;
+}
+.header__research i {
+  text-align: center;
+  padding: 2px 7% 0px 0px;
+}
+.header__research input {
+  border: none;
+  background-color: #eaeaea;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.header__content {
+  width: 100%;
+}
+.header__content h1 {
+  text-align: center;
+  margin: 50px 10% 0px 10%;
+  font-size: 25px;
+  font-weight: bold;
+}
+.header__content p {
+  text-align: center;
+  margin: 25px 5% 0px 5%;
+  font-size: 19px;
+  font-weight: lighter;
+}
+.header__content--bouton {
+  display: flex;
+  justify-content: center;
+}
+.header__content--bouton button {
+  border: none;
+  border-radius: 25px 25px 25px 25px;
+  margin: 30px 0px 60px;
+  background-color: #FF79DA;
+  padding: 20px 25px 20px 25px;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+}
 
 /*# sourceMappingURL=style.css.map */

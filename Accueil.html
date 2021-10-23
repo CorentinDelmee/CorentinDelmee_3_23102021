@@ -7,8 +7,15 @@
         <title>Accueil</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' type='text/css' media='screen' href='public/css/style.css'>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+
         <script src='main.js'></script>
     </head>
+
     <body>
     
 
@@ -19,29 +26,27 @@
 
 <!-- Logo -->
 
-            <div>
+            <div class="header__logo">
                 <img src="public\images\logo\ohmyfood@2x.svg" alt="">
             </div>
 
 <!-- Champ de recherche -->
 
-            <div>
-                <i></i>
+            <div class="header__research">
+                <i class="fas fa-map-marker-alt"></i>
                 <form>
                     <label for="input_research"></label>
-                    <input type="text" name="ville" placeholder="" value="">
+                    <input type="text" name="ville" placeholder="Votre ville" value="Paris, Belleville">
                 </form>
             </div>
 
 <!-- Header Content -->
-
-            <div>
+            <div class="header__content">
                 <h1>Réserver le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            </div>
-
-            <div>
-                <button>Explorer nos restaurants</button>
+               <div class="header__content--bouton">
+                   <button>Explorer nos restaurants</button>
+                </div>
             </div>
 
         </header>
@@ -52,7 +57,7 @@
 
         <section>
 
-<!-- Fonction Header -->
+<!-- Fonction H2 -->
 
             <div>
                 <h2>Fonctionnement</h2>
@@ -90,7 +95,7 @@
 
         <section>
 
-<!-- Restaurants Header -->
+<!-- Restaurants H2 -->
 
             <div>
                 <h2>Restaurants</h2>
