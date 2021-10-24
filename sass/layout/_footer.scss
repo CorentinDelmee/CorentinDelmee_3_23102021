@@ -1,0 +1,36 @@
+footer{
+    background-color: $background_color_3;
+    padding: 25px 0px 35px 0px;
+
+    & p{
+        font-size: 20px;
+        margin: 0px 0px 15px 25px;
+        color: white;
+    }
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__lien{
+        margin: 10px 0px 0px 25px;
+        min-width: 200px;
+
+        & a{
+            color: white;
+            font-size: 18px;
+        }
+    }
+
+    .footer__lien--icon{
+        & i{
+            color: white;
+            width: 15px;
+            margin-right: 10px;
+
+        }
+    }
+}
+
+
