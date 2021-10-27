@@ -5,6 +5,7 @@
 @import "./base/base";
 
 @import "./layout/header";
-@import "./layout/fonctionnement";
-@import "./layout/menu_restaurant";
-@import "./layout/footer"
+@import "./layout/footer";
+
+@import "./templates/homepage.scss";
+@import "./templates/menu.scss";
