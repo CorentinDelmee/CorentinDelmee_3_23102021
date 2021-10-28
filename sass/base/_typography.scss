@@ -11,6 +11,13 @@ section{
     font-family: 'Roboto', sans-serif;
 }
 
-footer p{
-    font-family: 'Shrikhand', cursive;
+footer{
+
+    & p{
+        font-family: 'Shrikhand', cursive;
+    }
+    
+    & a{
+        font-family: 'Roboto', sans-serif;
+    }
 }

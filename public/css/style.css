@@ -14,6 +14,9 @@ section {
 footer p {
   font-family: "Shrikhand", cursive;
 }
+footer a {
+  font-family: "Roboto", sans-serif;
+}
 
 * {
   box-sizing: border-box;
@@ -107,7 +110,7 @@ footer p {
 }
 .footer__lien a {
   color: white;
-  font-size: 18px;
+  font-size: 16px;
 }
 .footer .footer__lien--icon i {
   color: white;
@@ -127,7 +130,7 @@ footer p {
 }
 .templates_homepage .fonctionnement__container .fonctionnement {
   display: flex;
-  width: 33.3333333333%;
+  width: 100%;
   padding: 25px 5% 0px 5%;
 }
 .templates_homepage .fonctionnement__container .fonctionnement__nombre {
@@ -213,6 +216,102 @@ footer p {
 }
 .templates_homepage .menu__image--4 {
   background-image: url("../../public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+.templates_menu {
+  background-color: #f6f6f6;
+}
+.templates_menu .header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: white;
+  min-height: 80px;
+}
+.templates_menu .header__container img {
+  width: 170px;
+  margin-top: 5px;
+}
+.templates_menu .header__container a {
+  position: absolute;
+  left: 20px;
+}
+.templates_menu .menu__background_images {
+  width: 100%;
+  min-height: 260px;
+  background: url("../../public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.templates_menu .menu__header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: -50px 0px 0px 0px;
+  padding: 10px 5% 0px 5%;
+  background-color: #f6f6f6;
+  border-radius: 35px 35px 0px 0px;
+}
+.templates_menu .menu__header h1 {
+  font-size: 25px;
+  font-family: "Shrikhand", cursive;
+}
+.templates_menu .menu__header i {
+  font-size: 30px;
+  position: absolute;
+  right: 40px;
+}
+.templates_menu .menu {
+  padding: 0px 5% 0px 5%;
+}
+.templates_menu .menu__title h2 {
+  font-size: 17px;
+  font-weight: 300;
+  margin: 20px 0px 15px 0px;
+}
+.templates_menu .menu .card__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.templates_menu .menu .card__container--settings {
+  position: relative;
+  background-color: white;
+  margin: 0px 0px 20px 0px;
+  padding: 15px;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.19);
+}
+.templates_menu .menu .card__container--settings h3 {
+  font-size: 18px;
+  margin: 0;
+}
+.templates_menu .menu .card__container--settings--content {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 300;
+}
+.templates_menu .menu .card__container--settings--price {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+.templates_menu button {
+  display: flex;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  padding: 20px 50px 20px 50px;
+  background-image: radial-gradient(ellipse at 0% 0%, #FF79DA, #9356DC);
+  font-size: 17px;
+  font-weight: 400;
+  color: white;
+  border: none;
+  border-radius: 50px 50px 50px 50px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.19);
 }
 
 /*# sourceMappingURL=style.css.map */

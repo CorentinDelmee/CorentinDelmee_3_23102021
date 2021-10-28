@@ -1,0 +1,145 @@
+.templates_menu{
+    
+    background-color: $background_color_1;
+
+    .header__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        position: relative;
+
+        background-color: white;
+        min-height: 80px;
+
+        & img{
+            width: 170px;
+            margin-top: 5px;
+        }
+
+        & a{
+            position: absolute;
+            left: 20px;
+        }
+
+    }
+
+    .menu__background_images{
+        width: 100%;
+        min-height: 260px;
+
+        background: url("../../public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .menu__header{
+        display: flex;
+        align-items: center;
+
+        position: relative;
+
+        margin: -50px 0px 0px 0px;
+        padding: 10px 5% 0px 5%;
+
+        background-color: $background_color_1;
+        
+        border-radius: 35px 35px 0px 0px;
+        
+        & h1{
+            font-size: 25px;
+            font-family: 'Shrikhand', cursive;
+        }
+
+        & i{
+            font-size: 30px;
+            
+            position: absolute;
+            right: 40px;
+
+
+        }
+    }
+
+    .menu{
+        padding: 0px 5% 0px 5%;
+        
+        &__title{
+
+            & h2{
+                font-size: 17px;
+                font-weight: 300;
+
+                margin: 20px 0px 15px 0px;
+            }
+        }
+
+        .card__container{
+            display: flex;
+            flex-direction: column;
+            
+            width: 100%;
+
+            &--settings{
+                position: relative;
+
+                background-color: white;
+
+                margin: 0px 0px 20px 0px;
+                padding: 15px;
+
+                border-radius: 15px 15px 15px 15px;
+                box-shadow: 0 6px 10px rgba(0,0,0,0.19);
+
+
+                & h3{
+                    font-size: 18px;
+
+                    margin: 0;
+                }
+
+                &--content{
+                    margin: 0;
+                    
+                    font-size: 15px;
+                    font-weight: 300;
+                    
+                }
+
+                &--price{
+                    position: absolute;
+                    right: 20px;
+                    bottom: 0;
+                    
+
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+            }
+        }                   
+    }
+
+    & button{
+        display: flex;
+
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 80px;
+        padding: 20px 50px 20px 50px;
+
+        background-image: radial-gradient(ellipse at 0% 0%, $color_secondary,$color_primary);
+
+        font-size: 17px;
+        font-weight: 400;
+        color: white;
+
+        border: none;
+        border-radius: 50px 50px 50px 50px;
+        box-shadow: 0 6px 10px rgba(0,0,0,0.19);
+
+    }
+
+}

@@ -1,4 +1,9 @@
 .templates_homepage{
+
+
+                        // Affichage Fonctionnalités
+
+
     .section_1{
         padding: 50px 0px 60px 0px;
         
@@ -6,6 +11,7 @@
             margin: 0px 0px 0px 5%;
         }
     }
+
 .fonctionnement__container{
     display: flex;
     flex-wrap: wrap;
@@ -13,7 +19,7 @@
     .fonctionnement{
         display: flex;
 
-        width: calc(100% / 3);
+        width: 100%;
         padding: 25px 5% 0px 5%;
     
         &__nombre{
@@ -53,6 +59,11 @@
         }   
     }
 }
+
+
+                        // Affichage Menu
+                        
+                        
     .section_2{
 
         background-color: #f6f6f6;
