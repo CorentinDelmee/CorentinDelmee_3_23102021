@@ -34,59 +34,17 @@ a:visited {
   color: black;
 }
 
-.header__logo {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.header__research {
+.header {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  padding: 20px 0px 20px 0px;
-  background-color: #eaeaea;
+  align-items: center;
+  position: relative;
+  background-color: white;
+  height: 80px;
 }
-.header__research i {
-  text-align: center;
-  padding: 2px 7% 0px 0px;
-}
-.header__research input {
-  border: none;
-  background-color: #eaeaea;
-  font-size: 17px;
-  font-weight: 500;
-}
-
-.header__content {
-  width: 100%;
-  background-color: #f6f6f6;
-}
-.header__content h1 {
-  text-align: center;
-  margin: 0px 10% 0px 10%;
-  padding-top: 50px;
-  font-size: 25px;
-  font-weight: bold;
-}
-.header__content p {
-  text-align: center;
-  margin: 25px 5% 0px 5%;
-  font-size: 19px;
-  font-weight: lighter;
-}
-.header__content--bouton {
-  display: flex;
-  justify-content: center;
-}
-.header__content--bouton button {
-  border: none;
-  border-radius: 25px 25px 25px 25px;
-  margin: 30px 0px 60px;
-  background-color: #FF79DA;
-  padding: 20px 25px 20px 25px;
-  color: white;
-  font-size: 17px;
-  font-weight: 600;
+.header img {
+  width: 170px;
+  margin-top: 5px;
 }
 
 footer {
@@ -118,6 +76,58 @@ footer p {
   margin-right: 10px;
 }
 
+.templates_homepage .header {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.19);
+}
+.templates_homepage .header__research {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+}
+.templates_homepage .header__research i {
+  text-align: center;
+  padding: 2px 20px 0px 0px;
+}
+.templates_homepage .header__research p {
+  font-size: 17px;
+  font-weight: 500;
+}
+.templates_homepage .header__content {
+  width: 100%;
+  background-color: #f6f6f6;
+}
+.templates_homepage .header__content h1 {
+  text-align: center;
+  margin: 0px 10% 0px 10%;
+  padding-top: 50px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.templates_homepage .header__content p {
+  text-align: center;
+  margin: 25px 5% 0px 5%;
+  font-size: 19px;
+  font-weight: lighter;
+}
+.templates_homepage .header__content--bouton {
+  display: flex;
+  justify-content: center;
+}
+.templates_homepage .header__content--bouton button {
+  display: flex;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  padding: 20px 20px 20px 20px;
+  background-image: radial-gradient(ellipse at 0% 0%, #FF79DA, #9356DC);
+  font-size: 17px;
+  font-weight: 400;
+  color: white;
+  border: none;
+  border-radius: 50px 50px 50px 50px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.19);
+}
 .templates_homepage .section_1 {
   padding: 50px 0px 60px 0px;
 }
@@ -130,30 +140,42 @@ footer p {
 }
 .templates_homepage .fonctionnement__container .fonctionnement {
   display: flex;
+  position: relative;
+  background-color: #f6f6f6;
   width: 100%;
-  padding: 25px 5% 0px 5%;
+  margin: 25px 7% 0px 7%;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.19);
 }
 .templates_homepage .fonctionnement__container .fonctionnement__nombre {
-  font-size: 18px;
+  position: absolute;
+  left: -12px;
+  top: 22px;
+  font-size: 16px;
   color: white;
+  padding: 3px 8px 3px 8px;
   margin: auto;
   border-radius: 25px 25px 25px 25px;
-  padding: 5px 9px 2px 9px;
   background-color: #9356DC;
 }
 .templates_homepage .fonctionnement__container .fonctionnement i {
-  margin: auto;
+  display: flex;
+  align-items: center;
+  width: 20px;
   font-size: 18px;
   color: #7e7e7e;
-  margin: 0 30px 0 20px;
-  padding: 25px 0px 25px 0px;
+  margin: 0px 30px;
+}
+.templates_homepage .fonctionnement__container .fonctionnement .icon__color--primary {
+  color: #9356DC;
 }
 .templates_homepage .fonctionnement__container .fonctionnement__paragraphe {
+  padding: 7px 0px 7px 0px;
   font-size: 16px;
   font-weight: bold;
-  margin: 0 0 0 0;
-  padding: 25px 0px 25px 0px;
-  width: 100%;
+}
+.templates_homepage .fonctionnement__container .fonctionnement__background--modifier {
+  background-color: #f2eafb;
 }
 .templates_homepage .section_2 {
   background-color: #f6f6f6;
@@ -167,16 +189,23 @@ footer p {
   flex-wrap: wrap;
 }
 .templates_homepage .menu {
-  margin: 0;
-  margin-top: 20px;
+  position: relative;
   width: 100%;
-  padding: 0px 20px 0px 20px;
+  margin: 20px 20px 0px 20px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.19);
+  border-radius: 15px 15px 15px 15px;
+  background-color: white;
+}
+.templates_homepage .menu i {
+  font-size: 27px;
+  position: absolute;
+  bottom: 30px;
+  right: 25px;
 }
 .templates_homepage .menu a {
   display: flex;
   flex-direction: column;
-  border-radius: 0px 0px 15px 15px;
-  background-color: white;
+  border-radius: 15px 15px 15px 15px;
 }
 .templates_homepage .menu__image--settings {
   background-size: cover;
@@ -186,12 +215,19 @@ footer p {
   border-radius: 15px 15px 0px 0px;
   position: relative;
 }
-.templates_homepage .menu .paragraph__new {
+.templates_homepage .menu__image--settings p {
+  color: #1b6150;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 13px;
+  right: 10px;
+  background-color: #99E2D0;
+  padding: 8px 13px 8px 13px;
 }
 .templates_homepage .menu__content {
+  position: relative;
   border-radius: 0px 0px 15px 15px;
   padding-left: 15px;
 }
@@ -221,19 +257,7 @@ footer p {
 .templates_menu {
   background-color: #f6f6f6;
 }
-.templates_menu .header__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  background-color: white;
-  min-height: 80px;
-}
-.templates_menu .header__container img {
-  width: 170px;
-  margin-top: 5px;
-}
-.templates_menu .header__container a {
+.templates_menu .header a {
   position: absolute;
   left: 20px;
 }
@@ -266,9 +290,20 @@ footer p {
   padding: 0px 5% 0px 5%;
 }
 .templates_menu .menu__title h2 {
+  position: relative;
   font-size: 17px;
   font-weight: 300;
-  margin: 20px 0px 15px 0px;
+  margin: 20px 0px 30px 0px;
+}
+.templates_menu .menu__title h2::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background: #99e2d0;
+  position: absolute;
+  z-index: 20;
+  left: 0px;
+  bottom: -8px;
 }
 .templates_menu .menu .card__container {
   display: flex;

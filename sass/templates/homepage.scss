@@ -1,6 +1,83 @@
 .templates_homepage{
 
 
+                        // HEADER
+
+    .header{
+        box-shadow: 0 6px 10px rgba(0,0,0,0.19);
+    }
+
+    .header__research{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        background-color: $shadow_background_color;
+    
+        & i{
+            text-align: center;
+            padding: 2px 20px 0px 0px;
+    
+        }
+    
+        & p{
+            
+            font-size: 17px;
+            font-weight: 500;
+            
+        }
+    
+    }
+    
+    .header__content{
+    
+        width: 100%;
+        background-color: #f6f6f6;
+    
+        & h1{
+            text-align: center;
+            margin: 0px 10% 0px 10%;
+            padding-top: 50px;
+    
+            font-size: 25px;
+            font-weight: bold;
+    
+        }
+    
+        & p{
+            text-align: center;
+            margin: 25px 5% 0px 5%;
+            
+            font-size: 19px;
+            font-weight: lighter;   
+        }
+    
+        &--bouton{
+            display: flex;
+            justify-content: center;
+    
+            & button{
+                display: flex;
+    
+                margin: auto;
+                margin-top: 40px;
+                margin-bottom: 80px;
+                padding: 20px 20px 20px 20px;
+        
+                background-image: radial-gradient(ellipse at 0% 0%, $color_secondary,$color_primary);
+        
+                font-size: 17px;
+                font-weight: 400;
+                color: white;
+        
+                border: none;
+                border-radius: 50px 50px 50px 50px;
+                box-shadow: 0 6px 10px rgba(0,0,0,0.19);
+            }
+        }
+        
+    }
+
                         // Affichage Fonctionnalités
 
 
@@ -16,47 +93,66 @@
     display: flex;
     flex-wrap: wrap;
 
+
     .fonctionnement{
         display: flex;
+        position: relative;
+
+        background-color: $background_color_1;
 
         width: 100%;
-        padding: 25px 5% 0px 5%;
+        margin: 25px 7% 0px 7%;
     
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: 0 6px 10px rgba(0,0,0,0.19);
+
+
+
         &__nombre{
-            font-size: 18px;
+            position: absolute;
+            left: -12px;
+            top: 22px;
+
+            font-size: 16px;
             color: white;
-    
+            
+            padding: 3px 8px 3px 8px;
             margin: auto;
-    
+
             border-radius: 25px 25px 25px 25px;
-            padding: 5px 9px 2px 9px;
     
             background-color: #9356DC;
-    
     
         }
     
         & i{
-            margin: auto;
-    
+            display: flex;
+            align-items: center;
+
+            width: 20px;
             font-size: 18px;
             color: #7e7e7e;
-    
-            margin: 0 30px 0 20px;
-            padding: 25px 0px 25px 0px;
-    
+
+            margin: 0px 30px;    
+                
+        }
+
+        .icon__color--primary{
+            color: $color_primary;
         }
     
         &__paragraphe{
+
+            padding: 7px 0px 7px 0px;
+
             font-size: 16px;
             font-weight: bold;
-    
-            margin: 0 0 0 0;
-            padding: 25px 0px 25px 0px;
-    
-            width: 100%;
-    
-        }   
+            
+        } 
+        
+        &__background--modifier{
+            background-color: lighten($color: $color_primary, $amount: 35);
+        }
     }
 }
 
@@ -81,21 +177,28 @@
     }
     
     .menu{
-        
-        margin: 0;
-        margin-top: 20px;
-
+        position: relative;
         width: 100%;
 
-        padding: 0px 20px 0px 20px;
-    
-        
+        margin: 20px 20px 0px 20px;
+
+        box-shadow: 0 6px 10px rgba(0,0,0,0.19);
+        border-radius: 15px 15px 15px 15px;
+        background-color: white;
+
+        & i{
+            font-size: 27px;
+
+            position: absolute;
+            bottom: 30px;
+            right: 25px;
+        }
+
         & a{
             display: flex;
             flex-direction: column;
 
-            border-radius: 0px 0px 15px 15px;
-            background-color: white;
+            border-radius: 15px 15px 15px 15px;
         }
 
         &__image--settings{
@@ -110,19 +213,28 @@
     
             position: relative;
     
-    
-        }
-    
-        .paragraph__new{
-            position: absolute;
-            top: 0px;
-            right: 0px;
+
+            & p{
+                color: darken($color: $color_tertiary, $amount: 50);
+                font-size: 14px;
+                font-weight: bold;
+                margin: 0;
+
+                position: absolute;
+                top: 13px;
+                right: 10px;
+
+                background-color: $color_tertiary;
+
+                padding: 8px 13px 8px 13px;
+            }            
         }
     
         &__content{
+            position: relative;
 
             border-radius: 0px 0px 15px 15px;
-    
+
             padding-left: 15px;
     
             & h3{
@@ -135,9 +247,10 @@
             & p{
                 font-size: 16px;
                 text-decoration: none;
-    
+                
                 margin-top: 6px;
             }
+
         }
     
         &__image--1{
