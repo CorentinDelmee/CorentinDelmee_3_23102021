@@ -96,12 +96,12 @@
 
 .templates_homepage{
     opacity: 0.1;
-    animation: body__opacity 3000ms forwards;
+    animation: body__opacity 4000ms forwards;
 
 // Animation Body Opacity
 
 @keyframes body__opacity {
-    99%{
+    75%{
         opacity: 0.1;
     }
     100%{
