@@ -93,16 +93,40 @@
                 align-items: center;
                 justify-content: space-between;
 
+                animation: fade $anim-dur ease both;
+                @for $i from 1 through $num-card {
+                    &--#{$i} {
+                        animation-delay: $anim-delay * $i;
+                    }
+                }
+
+
+// Animation Menu Apparition Fade
+
+
+                    @keyframes fade {
+                        0%{
+                            opacity: 0;
+                        }
+                        100%{
+                            opacity: 1;
+                        }
+                    }
+
+
                 &:hover{
                     .card__container--settings--validation_box{
                         display: flex;
-                        animation: validation_box 600ms;
+                        animation: validation_box 600ms forwards;
                     }
                     .validation_icon{
-                        animation: validation_box_icon 600ms;
+                        animation: validation_box_icon 600ms forwards;
                     }
                     .card__container--settings--price{
-                        animation: prices_margin 600ms;
+                        animation: prices_margin 600ms forwards;
+                    }
+                    .card__container--settings--title_and_paragraph{
+                        animation: text_margin 600ms forwards;
                     }
                 }
 
@@ -202,12 +226,22 @@
 
                     @keyframes prices_margin {
                         0%{
-                            margin-right: 20px;
+                            transform: translateX(-20px);
                         }
                         100%{
-                            margin-right: 75px;
+                            transform: translateX(-75px);
                         }
                     }
+
+                    @keyframes text_margin {
+                        0%{
+                            width: 100%;
+                        }
+                        100%{
+                            width: 50%;
+                        }
+                    }
+
                 }
             }
         }                   

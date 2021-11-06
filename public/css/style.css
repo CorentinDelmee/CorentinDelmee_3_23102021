@@ -465,21 +465,60 @@ footer p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  animation: fade 900ms ease both;
   background-color: white;
   height: 100%;
   margin: 0px 0px 20px 0px;
   border-radius: 15px 15px 15px 15px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.19);
 }
+.templates_menu .menu .card__container--settings--1 {
+  animation-delay: 100ms;
+}
+.templates_menu .menu .card__container--settings--2 {
+  animation-delay: 200ms;
+}
+.templates_menu .menu .card__container--settings--3 {
+  animation-delay: 300ms;
+}
+.templates_menu .menu .card__container--settings--4 {
+  animation-delay: 400ms;
+}
+.templates_menu .menu .card__container--settings--5 {
+  animation-delay: 500ms;
+}
+.templates_menu .menu .card__container--settings--6 {
+  animation-delay: 600ms;
+}
+.templates_menu .menu .card__container--settings--7 {
+  animation-delay: 700ms;
+}
+.templates_menu .menu .card__container--settings--8 {
+  animation-delay: 800ms;
+}
+.templates_menu .menu .card__container--settings--9 {
+  animation-delay: 900ms;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .templates_menu .menu .card__container--settings:hover .card__container--settings--validation_box {
   display: flex;
-  animation: validation_box 600ms;
+  animation: validation_box 600ms forwards;
 }
 .templates_menu .menu .card__container--settings:hover .validation_icon {
-  animation: validation_box_icon 600ms;
+  animation: validation_box_icon 600ms forwards;
 }
 .templates_menu .menu .card__container--settings:hover .card__container--settings--price {
-  animation: prices_margin 600ms;
+  animation: prices_margin 600ms forwards;
+}
+.templates_menu .menu .card__container--settings:hover .card__container--settings--title_and_paragraph {
+  animation: text_margin 600ms forwards;
 }
 .templates_menu .menu .card__container--settings--title_and_paragraph {
   display: flex;
@@ -545,10 +584,18 @@ footer p {
 }
 @keyframes prices_margin {
   0% {
-    margin-right: 20px;
+    transform: translateX(-20px);
   }
   100% {
-    margin-right: 75px;
+    transform: translateX(-75px);
+  }
+}
+@keyframes text_margin {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 50%;
   }
 }
 .templates_menu button {
