@@ -1,0 +1,13 @@
+.btn_anim{
+
+    background-image: radial-gradient(ellipse at 0% 0%, $color_secondary,$color_primary);
+
+
+    transform: scale(1);
+    transition: background-image 500ms ease, transform 200ms ease;
+
+    &:hover{
+        background-image: radial-gradient(ellipse at 0% 0%, $color_secondary_darken,$color_primary_darken);
+        transform: scale(1.02);
+    }
+}

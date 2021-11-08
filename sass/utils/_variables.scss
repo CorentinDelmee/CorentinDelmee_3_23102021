@@ -2,6 +2,10 @@ $color_primary: #9356DC;
 $color_secondary: #FF79DA; 
 $color_tertiary: #99E2D0;
 
+
+$color_secondary_darken: darken($color_secondary, 5%);
+$color_primary_darken: darken($color_primary, 5%);
+
 $color_icon: #7e7e7e;
 
 $background_color_1: #f6f6f6;
@@ -11,6 +15,8 @@ $shadow_background_color:#eaeaea;
 
 // Variables Animation Menu_Fade
 
-$num-card: 9;
+$num-card: 10;
 $anim-dur: 900ms;
 $anim-delay: $anim-dur / $num-card;
+
+$taille_prix: 50px;

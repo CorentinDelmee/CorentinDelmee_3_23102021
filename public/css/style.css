@@ -121,6 +121,16 @@ a:visited {
     opacity: 0;
   }
 }
+.btn_anim {
+  background-image: radial-gradient(ellipse at 0% 0%, #FF79DA, #9356DC);
+  transform: scale(1);
+  transition: background-image 500ms ease, transform 200ms ease;
+}
+.btn_anim:hover {
+  background-image: radial-gradient(ellipse at 0% 0%, #ff60d3, #8641d8);
+  transform: scale(1.02);
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -221,7 +231,6 @@ footer p {
   margin-top: 40px;
   margin-bottom: 80px;
   padding: 20px 20px 20px 20px;
-  background-image: radial-gradient(ellipse at 0% 0%, #FF79DA, #9356DC);
   font-size: 17px;
   font-weight: 400;
   color: white;
@@ -531,12 +540,6 @@ footer p {
   left: 0px;
   bottom: -8px;
 }
-.templates_menu .menu .card_container_la_note_enchantee_height {
-  height: 360px;
-}
-.templates_menu .menu .card_container_menu_height {
-  height: 270px;
-}
 .templates_menu .menu .card__container {
   display: flex;
   flex-direction: column;
@@ -546,6 +549,9 @@ footer p {
   position: relative;
   display: flex;
   align-items: center;
+  padding: 18px 0px 18px 14px;
+  overflow: hidden;
+  transform: translateY(40px);
   animation: fade 900ms ease both;
   background-color: white;
   height: 100%;
@@ -554,60 +560,64 @@ footer p {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.19);
 }
 .templates_menu .menu .card__container--settings--1 {
-  animation-delay: 100ms;
+  animation-delay: 90ms;
 }
 .templates_menu .menu .card__container--settings--2 {
-  animation-delay: 200ms;
+  animation-delay: 180ms;
 }
 .templates_menu .menu .card__container--settings--3 {
-  animation-delay: 300ms;
+  animation-delay: 270ms;
 }
 .templates_menu .menu .card__container--settings--4 {
-  animation-delay: 400ms;
+  animation-delay: 360ms;
 }
 .templates_menu .menu .card__container--settings--5 {
-  animation-delay: 500ms;
+  animation-delay: 450ms;
 }
 .templates_menu .menu .card__container--settings--6 {
-  animation-delay: 600ms;
+  animation-delay: 540ms;
 }
 .templates_menu .menu .card__container--settings--7 {
-  animation-delay: 700ms;
+  animation-delay: 630ms;
 }
 .templates_menu .menu .card__container--settings--8 {
-  animation-delay: 800ms;
+  animation-delay: 720ms;
 }
 .templates_menu .menu .card__container--settings--9 {
+  animation-delay: 810ms;
+}
+.templates_menu .menu .card__container--settings--10 {
   animation-delay: 900ms;
 }
 @keyframes fade {
   0% {
     opacity: 0;
+    transform: translateY(40px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0px);
   }
 }
 .templates_menu .menu .card__container--settings:hover .card__container--settings--validation_box {
   display: flex;
-  transform: scaleX(1);
+  transform: translateX(0);
   opacity: 100%;
 }
 .templates_menu .menu .card__container--settings:hover .validation_icon {
   transform: rotate(360deg);
 }
 .templates_menu .menu .card__container--settings:hover .card__container--settings--title_and_paragraph {
-  width: 62%;
+  width: calc((100% - 50px) - 61px);
 }
 .templates_menu .menu .card__container--settings--title_and_paragraph {
   position: relative;
-  width: 80%;
+  width: calc(100% - 50px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
   white-space: nowrap;
-  margin-left: 15px;
   transition: width 600ms ease;
 }
 .templates_menu .menu .card__container--settings h3 {
@@ -625,7 +635,7 @@ footer p {
 }
 .templates_menu .menu .card__container--settings--price {
   position: relative;
-  width: 75px;
+  width: 50px;
   margin: 20px 0px 0px 10px;
   font-size: 15px;
   font-weight: bold;
@@ -633,10 +643,11 @@ footer p {
 .templates_menu .menu .card__container--settings--validation_box {
   position: absolute;
   right: 0;
-  opacity: 0;
-  transform: scaleX(0);
+  opacity: 1;
+  transform: translateX(100%);
   transform-origin: 100% 50%;
   padding: 23px 18px 23px 18px;
+  height: 100%;
   border-radius: 0px 15px 15px 0px;
   background-color: #99E2D0;
   transition: transform 600ms;

@@ -144,13 +144,6 @@
 
 // Card Menu
 
-        .card_container_la_note_enchantee_height{
-            height: 360px;
-        }
-
-        .card_container_menu_height{
-            height: 270px;
-        }
 
         .card__container{
             display: flex;
@@ -164,6 +157,10 @@
                 display: flex;
                 align-items: center;
 
+                padding: 18px 0px 18px 14px;
+                overflow: hidden;
+
+                transform: translateY(40px);
                 animation: fade $anim-dur ease both;
                 @for $i from 1 through $num-card {
                     &--#{$i} {
@@ -178,9 +175,11 @@
                     @keyframes fade {
                         0%{
                             opacity: 0;
+                            transform: translateY(40px);
                         }
                         100%{
                             opacity: 1;
+                            transform: translateY(0px);
                         }
                     }
 
@@ -188,7 +187,7 @@
                     &:hover{
                         .card__container--settings--validation_box{
                             display: flex;
-                            transform: scaleX(1);
+                            transform: translateX(0);
                             opacity: 100%;
                             //animation: validation_box 600ms forwards;
                         }
@@ -197,7 +196,7 @@
                             //animation: validation_box_icon 600ms forwards;
                         }
                         .card__container--settings--title_and_paragraph{
-                            width: 62%
+                            width: calc(calc(100% - #{$taille_prix}) - 61px);
                             //animation: text_width 600ms forwards;
                         }
                     }
@@ -212,7 +211,7 @@
     
                     &--title_and_paragraph{   
                         position: relative;
-                        width: 80%;
+                        width: calc(100% - #{$taille_prix});
                         
                         display: flex;
                         flex-direction: column;
@@ -221,7 +220,6 @@
                         overflow: hidden;
                         white-space: nowrap;
     
-                        margin-left: 15px;
                         transition: width 600ms ease;
                     }
     
@@ -247,7 +245,7 @@
     
                     &--price{
                         position: relative;
-                        width: 75px;
+                        width: $taille_prix;
                         margin: 20px 0px 0px 10px;
                         font-size: 15px;
                         font-weight: bold;
@@ -256,13 +254,14 @@
                     &--validation_box{
                         position: absolute;
                         right: 0;
-                        opacity: 0;
+                        opacity: 1;
                         
-                        transform: scaleX(0);
+                        transform: translateX(100%);
                         transform-origin: 100% 50%;
-    
-                        padding: 23px 18px 23px 18px;
                         
+                        padding: 23px 18px 23px 18px;
+                        height: 100%;
+
                         border-radius: 0px 15px 15px 0px;
     
                         background-color: $color_tertiary;
