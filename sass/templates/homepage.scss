@@ -1,108 +1,15 @@
-// LOADING SPINNER ANIMATION
-
-.loader  {
-    animation: rotate 1s 4, spinner_opacity 3000ms forwards;  
-    height: 50px;
-    width: 50px;
-    
-    z-index: 30;
-    position: fixed;
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    
-  }
-  
-  .loader:before,
-  .loader:after {   
-    border-radius: 50%;
-    content: '';
-    display: block;
-    height: 20px;  
-    width: 20px;
-  }
-  .loader:before {
-    animation: ball1 1s 4;  
-    background-color: $color_secondary;
-    box-shadow: 30px 0 0 $color_tertiary;
-    margin-bottom: 10px;
-  }
-  .loader:after {
-    animation: ball2 1s 4; 
-    background-color: $color_tertiary;
-    box-shadow: 30px 0 0 $color_tertiary;
-  }
-  
-  @keyframes rotate {
-    0% { 
-      -webkit-transform: rotate(0deg) scale(0.8); 
-      -moz-transform: rotate(0deg) scale(0.8);
-    }
-    50% { 
-      -webkit-transform: rotate(360deg) scale(1.2); 
-      -moz-transform: rotate(360deg) scale(1.2);
-    }
-    100% { 
-      -webkit-transform: rotate(720deg) scale(0.8); 
-      -moz-transform: rotate(720deg) scale(0.8);
-    }
-  }
-  
-  @keyframes ball1 {
-    0% {
-      box-shadow: 30px 0 0 $color_tertiary;
-    }
-    50% {
-      box-shadow: 0 0 0 $color_tertiary;
-      margin-bottom: 0;
-      -webkit-transform: translate(15px,15px);
-      -moz-transform: translate(15px, 15px);
-    }
-    100% {
-      box-shadow: 30px 0 0 $color_tertiary;
-      margin-bottom: 10px;
-    }
-  }
-  
-  @keyframes ball2 {
-    0% {
-      box-shadow: 30px 0 0 $color_primary;
-    }
-    50% {
-      box-shadow: 0 0 0 $color_primary;
-      margin-top: -20px;
-      -webkit-transform: translate(15px,15px);
-      -moz-transform: translate(15px, 15px);
-    }
-    100% {
-      box-shadow: 30px 0 0 $color_primary;
-      margin-top: 0;
-    }
-  }
-
-  @keyframes spinner_opacity {
-      99%{
-          opacity: 1;
-      }
-      100%{
-          opacity: 0;
-      }
-  }
-
-                        // BODY
+                       // BODY
 
 
 .templates_homepage{
-    opacity: 0.1;
+    opacity: 0;
     animation: body__opacity 4000ms forwards;
 
 // Animation Body Opacity
 
 @keyframes body__opacity {
     75%{
-        opacity: 0.1;
+        opacity: 0;
     }
     100%{
         opacity: 100%;
@@ -203,6 +110,10 @@
     display: flex;
     flex-wrap: wrap;
 
+    @media screen and (min-width: 992px) {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
 
     .fonctionnement{
         display: flex;
@@ -216,7 +127,11 @@
         border-radius: 20px 20px 20px 20px;
         box-shadow: 0 6px 10px rgba(0,0,0,0.19);
 
-
+        @media screen and (min-width: 992px) {
+            width: 30%;
+            max-width: 400px;
+            margin: 25px 0px 0px 0px;
+        }
 
         &__nombre{
             position: absolute;
@@ -278,12 +193,17 @@
         & h2{
             margin: 0px 5% 0px 5%;
         }
+
     }
     
     .menu_container{
         display: flex;
         flex-wrap: wrap;
-    
+        
+        @media screen and (min-width: 550px) {
+            justify-content: center;
+            margin-top: 20px;
+        }
     }
     
     .menu{
@@ -296,7 +216,12 @@
         border-radius: 15px 15px 15px 15px;
         background-color: white;
 
-        
+        @media screen and (min-width: 550px) {
+            width: 300px;
+            height: 300px;
+        }
+
+
 // ANIMATION Menu
 
 
@@ -397,6 +322,10 @@
             border-radius: 15px 15px 0px 0px;
     
             position: relative;
+
+            @media screen and (min-width: 550px){
+                min-height: 220px;;
+            }
     
 
             & p{
@@ -436,6 +365,10 @@
                 margin-top: 6px;
             }
 
+            @media screen and (min-width: 1080px){
+                height: 25%;
+            }
+
         }
     
         &__image--1{
@@ -455,4 +388,6 @@
         }
     }
 }
+
+
 

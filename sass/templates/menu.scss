@@ -19,6 +19,27 @@
         background-size: cover;
         background-position: center;
 
+        @media screen and (min-width: 1080px) {
+            height: 400px;
+        }
+
+    }
+    .display_header_et_menu{
+
+        @media screen and (min-width: 1080px){
+            max-width: 1200px;
+            margin: auto;
+            
+        }
+    }
+
+    .display_menu{
+
+        @media screen and (min-width: 1080px) {
+            display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        }
     }
 
     .menu__header{
@@ -28,29 +49,86 @@
         position: relative;
 
         margin: -50px 0px 0px 0px;
-        padding: 10px 5% 0px 5%;
+        padding: 10px 15px 0px 15px;
 
         background-color: $background_color_1;
         
         border-radius: 35px 35px 0px 0px;
         
+        @media screen and (min-width: 1080px) {
+            display: flex;
+            justify-content: center;
+        }
+
         & h1{
             font-size: 25px;
             font-family: 'Shrikhand', cursive;
         }
 
-        & i{
-            font-size: 30px;
-            
-            position: absolute;
-            right: 40px;
+        &__icon{
+            &:hover{
+                .coeur__origin{
+                    animation: icon__coeur__origin 800ms forwards;
+                }
+                .coeur__fade{
+                    animation: icon__coeur__fade 800ms forwards;
+                }
+            }
 
+            & i{
+                font-size: 30px;
+    
+                position: absolute;
+                top: 35px;
+                right: 25px;
+            }
+    
+            .coeur__fade{
+                background-image: radial-gradient(ellipse at 0% 0%, $color_primary,$color_secondary);
+                background-clip: border-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+    
+                opacity: 0;
+            }
+        }
+        
+
+        @keyframes icon__coeur__origin {
+            0%{
+                opacity: 1;
+                animation-timing-function: cubic-bezier(42,0,1,1);
+            }
+            20%{
+                transform: scale(1.2, 1.2);
+            }
+            100%{
+                opacity: 0;
+                transform: scale(1, 1);
+                animation-timing-function: cubic-bezier(0,0,.58);
+            }
+            
+        }
+
+        @keyframes icon__coeur__fade {
+            0%{
+                opacity: 0;
+                transform: scale(1.2, 1.2);
+                animation-timing-function: cubic-bezier(42,0,1,1);
+            }
+            100%{
+                opacity: 1;
+                transform: scale(1, 1);
+                animation-timing-function: cubic-bezier(0,0,.58);
+            }
         }
     }
+    
 
     .menu{
-        padding: 0px 5% 0px 5%;
+        padding: 0px 15px 0px 15px;
         
+        max-width: 450px;
         &__title{
 
             & h2{
@@ -91,7 +169,6 @@
                 
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
 
                 animation: fade $anim-dur ease both;
                 @for $i from 1 through $num-card {
@@ -114,139 +191,131 @@
                     }
 
 
-                &:hover{
-                    .card__container--settings--validation_box{
+                    &:hover{
+                        .card__container--settings--validation_box{
+                            display: flex;
+                            animation: validation_box 600ms forwards;
+                        }
+                        .validation_icon{
+                            animation: validation_box_icon 600ms forwards;
+                        }
+                        .card__container--settings--title_and_paragraph{
+                            animation: text_width 600ms forwards;
+                        }
+                    }
+    
+                    background-color: white;
+                    height: 100%;
+                    
+                    margin: 0px 0px 20px 0px;
+    
+                    border-radius: 15px 15px 15px 15px;
+                    box-shadow: 0 6px 10px rgba(0,0,0,0.19);
+    
+                    &--title_and_paragraph{   
+                        position: relative;
+                        width: 100%;
+                        
                         display: flex;
-                        animation: validation_box 600ms forwards;
+                        flex-direction: column;
+                        justify-content: center;
+    
+                        overflow: hidden;
+                        white-space: nowrap;
+    
+                        margin-left: 15px;
                     }
-                    .validation_icon{
-                        animation: validation_box_icon 600ms forwards;
+    
+                    & h3{
+                        font-size: 18px;
+                        margin: 0;
+    
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
-                    .card__container--settings--price{
-                        animation: prices_margin 600ms forwards;
-                    }
-                    .card__container--settings--title_and_paragraph{
-                        animation: text_margin 600ms forwards;
-                    }
-                }
-
-                background-color: white;
-                height: 100%;
-                
-                margin: 0px 0px 20px 0px;
-
-                border-radius: 15px 15px 15px 15px;
-                box-shadow: 0 6px 10px rgba(0,0,0,0.19);
-
-                &--title_and_paragraph{                    
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-
-                    overflow: hidden;
-                    white-space: nowrap;
-
-                    margin-left: 15px;
-                }
-
-                & h3{
-                    font-size: 18px;
-                    margin: 0;
-
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-
-                &--content{
-                    margin: 0;
-                    
-                    font-size: 15px;
-                    font-weight: 300;
-                    
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    
-                }
-
-                &--price{
-                    margin: 25px 20px 5px 0px;
-                    font-size: 15px;
-                    font-weight: bold;
-                }
-
-                &--validation_box{
-                    position: absolute;
-                    right: 0;
-
-                    opacity: 0;
-                    transform: scaleX(1.0);
-                    transform-origin: 100% 50%;
-
-                    padding: 23px 18px 23px 18px;
-                    
-                    border-radius: 0px 15px 15px 0px;
-
-                    background-color: $color_tertiary;
-
-                    & i{
+    
+                    &--content{
+    
+                        margin: 0;
+    
                         font-size: 15px;
-                        color: $color_tertiary;
-
-                        background-color: white;
-                        border-radius: 25px 25px 25px 25px;
-
-                        margin: auto;
-                        padding: 5px 5px 5px 5px;
+                        font-weight: 300;
+                        
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                         
                     }
-                
-
-// Animation Validation Box
-
-
-                    @keyframes validation_box {
-                        0%{
-                            transform: scaleX(0);
-                            opacity: 100%;
+    
+                    &--price{
+                        position: relative;
+                        width: 75px;
+                        margin: 20px 0px 0px 10px;
+                        font-size: 15px;
+                        font-weight: bold;
+                    }
+    
+                    &--validation_box{
+                        position: absolute;
+                        right: 0;
+                        opacity: 0;
+    
+                        transform-origin: 100% 50%;
+    
+                        padding: 23px 18px 23px 18px;
+                        
+                        border-radius: 0px 15px 15px 0px;
+    
+                        background-color: $color_tertiary;
+    
+                        & i{
+                            font-size: 15px;
+                            color: $color_tertiary;
+    
+                            background-color: white;
+                            border-radius: 25px 25px 25px 25px;
+    
+                            margin: auto;
+                            padding: 5px 5px 5px 5px;
+                            
                         }
-                        100%{
-                            transform: scaleX(1);
-                            opacity: 100%;
+                    
+    
+    // Animation Validation Box
+    
+    
+                        @keyframes validation_box {
+                            0%{
+                                transform: scaleX(0);
+                                opacity: 100%;
+                            }
+                            100%{
+                                transform: scaleX(1);
+                                opacity: 100%;
+                            }
+                        }
+    
+                        @keyframes validation_box_icon {
+                            0%{
+                                transform: rotate(0);
+                            }
+                            100%{
+                                transform: rotate(360deg);
+                            }
+                        }
+    
+                        @keyframes text_width {
+                            0%{
+                                width: 80%;
+                            }
+                            100%{
+                                width: 62%;
+                            }
                         }
                     }
-
-                    @keyframes validation_box_icon {
-                        0%{
-                            transform: rotate(0);
-                        }
-                        100%{
-                            transform: rotate(360deg);
-                        }
-                    }
-
-                    @keyframes prices_margin {
-                        0%{
-                            transform: translateX(-20px);
-                        }
-                        100%{
-                            transform: translateX(-75px);
-                        }
-                    }
-
-                    @keyframes text_margin {
-                        0%{
-                            width: 100%;
-                        }
-                        100%{
-                            width: 50%;
-                        }
-                    }
-
                 }
-            }
-        }                   
-    }
-
+            }                   
+        }
+    
 
 // Button de commande
 
@@ -272,3 +341,23 @@
     }
 
 }
+
+@media screen and (max-width: 1080px) {
+    .menu{
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+
+    footer{
+        padding-bottom: 70px;
+
+        & p{
+            
+            margin-bottom: 30px;
+        }
+    }
+
+}
+
