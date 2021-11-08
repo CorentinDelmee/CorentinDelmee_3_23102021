@@ -71,7 +71,8 @@
                     animation: icon__coeur__origin 800ms forwards;
                 }
                 .coeur__fade{
-                    animation: icon__coeur__fade 800ms forwards;
+                    opacity: 1;
+                    transform: scale(1, 1);
                 }
             }
 
@@ -90,6 +91,7 @@
                 -webkit-text-fill-color: transparent;
     
                 opacity: 0;
+                transition: opacity 800ms, transform 800ms;
             }
         }
         
@@ -108,19 +110,6 @@
                 animation-timing-function: cubic-bezier(0,0,.58);
             }
             
-        }
-
-        @keyframes icon__coeur__fade {
-            0%{
-                opacity: 0;
-                transform: scale(1.2, 1.2);
-                animation-timing-function: cubic-bezier(42,0,1,1);
-            }
-            100%{
-                opacity: 1;
-                transform: scale(1, 1);
-                animation-timing-function: cubic-bezier(0,0,.58);
-            }
         }
     }
     
@@ -194,13 +183,17 @@
                     &:hover{
                         .card__container--settings--validation_box{
                             display: flex;
-                            animation: validation_box 600ms forwards;
+                            transform: scaleX(1);
+                            opacity: 100%;
+                            //animation: validation_box 600ms forwards;
                         }
                         .validation_icon{
-                            animation: validation_box_icon 600ms forwards;
+                            transform: rotate(360deg);
+                            //animation: validation_box_icon 600ms forwards;
                         }
                         .card__container--settings--title_and_paragraph{
-                            animation: text_width 600ms forwards;
+                            width: 62%
+                            //animation: text_width 600ms forwards;
                         }
                     }
     
@@ -214,7 +207,7 @@
     
                     &--title_and_paragraph{   
                         position: relative;
-                        width: 100%;
+                        width: 80%;
                         
                         display: flex;
                         flex-direction: column;
@@ -224,6 +217,7 @@
                         white-space: nowrap;
     
                         margin-left: 15px;
+                        transition: width 600ms ease;
                     }
     
                     & h3{
@@ -258,7 +252,8 @@
                         position: absolute;
                         right: 0;
                         opacity: 0;
-    
+                        
+                        transform: scaleX(0);
                         transform-origin: 100% 50%;
     
                         padding: 23px 18px 23px 18px;
@@ -266,6 +261,8 @@
                         border-radius: 0px 15px 15px 0px;
     
                         background-color: $color_tertiary;
+
+                        transition: transform 600ms;
     
                         & i{
                             font-size: 15px;
@@ -277,12 +274,13 @@
                             margin: auto;
                             padding: 5px 5px 5px 5px;
                             
+                            transition: transform 600ms;
                         }
                     
     
     // Animation Validation Box
     
-    
+    /*
                         @keyframes validation_box {
                             0%{
                                 transform: scaleX(0);
@@ -310,7 +308,7 @@
                             100%{
                                 width: 62%;
                             }
-                        }
+                        }*/
                     }
                 }
             }                   
