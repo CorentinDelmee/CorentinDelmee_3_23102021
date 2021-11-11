@@ -1,8 +1,3 @@
-body {
-  /*font-family: 'Roboto', sans-serif;
-  font-family: 'Shrikhand', cursive;*/
-}
-
 header {
   font-family: "Roboto", sans-serif;
 }
@@ -29,9 +24,11 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 }
 a:visited {
   color: black;
+  text-decoration: none;
 }
 
 .loader {
@@ -124,7 +121,7 @@ a:visited {
 .btn_anim {
   background-image: radial-gradient(ellipse at 0% 0%, #FF79DA, #9356DC);
   transform: scale(1);
-  transition: background-image 500ms ease, transform 200ms ease;
+  transition: 500ms ease;
 }
 .btn_anim:hover {
   background-image: radial-gradient(ellipse at 0% 0%, #ff60d3, #8641d8);
@@ -262,6 +259,11 @@ footer p {
   margin: 25px 7% 0px 7%;
   border-radius: 20px 20px 20px 20px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.19);
+  transition: 500ms ease;
+}
+.templates_homepage .fonctionnement__container .fonctionnement:hover {
+  background-color: #f2eafb;
+  transform: scale(1.02);
 }
 @media screen and (min-width: 992px) {
   .templates_homepage .fonctionnement__container .fonctionnement {
@@ -296,9 +298,6 @@ footer p {
   padding: 7px 0px 7px 0px;
   font-size: 16px;
   font-weight: bold;
-}
-.templates_homepage .fonctionnement__container .fonctionnement__background--modifier {
-  background-color: #f2eafb;
 }
 .templates_homepage .section_2 {
   background-color: #f6f6f6;
@@ -361,7 +360,6 @@ footer p {
 @keyframes icon__coeur__origin {
   0% {
     opacity: 1;
-    animation-timing-function: cubic-bezier(42, 0, 1, 1);
   }
   20% {
     transform: scale(1.2, 1.2);
@@ -369,7 +367,6 @@ footer p {
   100% {
     opacity: 0;
     transform: scale(1, 1);
-    animation-timing-function: cubic-bezier(0, 0, 0.58);
   }
 }
 .templates_homepage .menu a {
@@ -509,7 +506,6 @@ footer p {
 @keyframes icon__coeur__origin {
   0% {
     opacity: 1;
-    animation-timing-function: cubic-bezier(42, 0, 1, 1);
   }
   20% {
     transform: scale(1.2, 1.2);
@@ -517,12 +513,18 @@ footer p {
   100% {
     opacity: 0;
     transform: scale(1, 1);
-    animation-timing-function: cubic-bezier(0, 0, 0.58);
   }
 }
 .templates_menu .menu {
   padding: 0px 15px 0px 15px;
+  margin: auto;
   max-width: 450px;
+}
+@media screen and (min-width: 1080px) {
+  .templates_menu .menu {
+    margin: unset;
+    width: 30%;
+  }
 }
 .templates_menu .menu__title h2 {
   position: relative;
@@ -705,11 +707,12 @@ footer p {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.19);
 }
 
-@media screen and (max-width: 1080px) {
-  .menu {
-    margin: auto;
-  }
-}
+/*@media screen and (min-width: 1080px) {
+    .menu{
+        margin: unset;
+        width: 30%;
+    }
+}*/
 @media screen and (min-width: 1080px) {
   footer {
     padding-bottom: 70px;

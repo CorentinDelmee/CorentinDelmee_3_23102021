@@ -99,7 +99,6 @@
         @keyframes icon__coeur__origin {
             0%{
                 opacity: 1;
-                animation-timing-function: cubic-bezier(42,0,1,1);
             }
             20%{
                 transform: scale(1.2, 1.2);
@@ -107,7 +106,6 @@
             100%{
                 opacity: 0;
                 transform: scale(1, 1);
-                animation-timing-function: cubic-bezier(0,0,.58);
             }
             
         }
@@ -117,7 +115,13 @@
     .menu{
         padding: 0px 15px 0px 15px;
         
+        margin: auto;
         max-width: 450px;
+
+        @media screen and (min-width: 1080px) {
+            margin: unset;
+            width: 30%;
+        }
         &__title{
 
             & h2{
@@ -344,11 +348,13 @@
 
 }
 
-@media screen and (max-width: 1080px) {
+
+/*@media screen and (min-width: 1080px) {
     .menu{
-        margin: auto;
+        margin: unset;
+        width: 30%;
     }
-}
+}*/
 
 @media screen and (min-width: 1080px) {
 

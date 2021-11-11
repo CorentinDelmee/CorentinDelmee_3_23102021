@@ -128,6 +128,13 @@
         border-radius: 20px 20px 20px 20px;
         box-shadow: 0 6px 10px rgba(0,0,0,0.19);
 
+        transition: 500ms ease;
+
+        &:hover{
+            background-color: lighten($color: $color_primary, $amount: 35);
+            transform: scale(1.02);
+        }
+
         @media screen and (min-width: 992px) {
             width: 30%;
             max-width: 400px;
@@ -175,10 +182,6 @@
             font-weight: bold;
             
         } 
-        
-        &__background--modifier{
-            background-color: lighten($color: $color_primary, $amount: 35);
-        }
     }
 }
 
@@ -274,7 +277,6 @@
         @keyframes icon__coeur__origin {
             0%{
                 opacity: 1;
-                animation-timing-function: cubic-bezier(42,0,1,1);
             }
             20%{
                 transform: scale(1.2, 1.2);
@@ -282,7 +284,6 @@
             100%{
                 opacity: 0;
                 transform: scale(1, 1);
-                animation-timing-function: cubic-bezier(0,0,.58);
             }
             
         }
