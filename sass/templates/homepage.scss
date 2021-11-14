@@ -49,7 +49,7 @@
     .header__content{
     
         width: 100%;
-        background-color: #f6f6f6;
+        background-color: $background_color_1;
     
         & h1{
             text-align: center;
@@ -90,6 +90,7 @@
                 border-radius: 50px 50px 50px 50px;
                 box-shadow: 0 6px 10px rgba(0,0,0,0.19);
 
+                cursor: pointer;
             }
 
         }
@@ -125,10 +126,12 @@
         width: 100%;
         margin: 25px 7% 0px 7%;
     
+        border: none;
         border-radius: 20px 20px 20px 20px;
         box-shadow: 0 6px 10px rgba(0,0,0,0.19);
 
         transition: 500ms ease;
+        
 
         &:hover{
             background-color: lighten($color: $color_primary, $amount: 35);
@@ -154,7 +157,7 @@
 
             border-radius: 25px 25px 25px 25px;
     
-            background-color: #9356DC;
+            background-color: $color_primary;
     
         }
     
@@ -162,9 +165,10 @@
             display: flex;
             align-items: center;
 
+            height: 100%;
             width: 20px;
             font-size: 18px;
-            color: #7e7e7e;
+            color: $color_icon;
 
             margin: 0px 30px;    
 
@@ -191,7 +195,7 @@
                         
     .section_2{
 
-        background-color: #f6f6f6;
+        background-color: $background_color_1;
         padding: 50px 0px 60px 0px;
     
         & h2{
