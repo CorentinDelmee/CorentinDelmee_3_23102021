@@ -7,7 +7,7 @@
     transition: 500ms ease;
 
     &:hover{
-        background-image: radial-gradient(ellipse at 0% 0%, $color_secondary_darken,$color_primary_darken);
+        opacity: 0.8;
         transform: scale(1.02);
     }
 }
